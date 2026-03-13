@@ -151,7 +151,6 @@ Yes. Even though each student follows simple rules (decrease attention during cl
 
 ## PART 6 — Data Analysis Task
 
-The CSV file contains columns: cycle, avg_attention, avg_performance, is_break, high_attention_count.
 ![alt text](<classroom_plots.png>)
 
 **Key findings from data analysis:**
