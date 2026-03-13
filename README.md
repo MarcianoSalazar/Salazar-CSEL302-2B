@@ -44,10 +44,10 @@ If attention keeps decreasing without any break, it will eventually reach the mi
 
 | Metric | Value (after 100 cycles) |
 |--------|--------------------------|
-| Average Attention | ~0.52 |
-| Average Performance | ~0.57 |
-| High Attention Count | ~8–10 students |
-| Number of Breaks Occurred | ~3 breaks |
+| Average Attention | 0.80 |
+| Average Performance | 1.0 |
+| High Attention Count | 25 students |
+| Number of Breaks Occurred | ~2 breaks |
 
 ---
 
