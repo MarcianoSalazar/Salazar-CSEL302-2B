@@ -1,9 +1,8 @@
-# Salazar-CSEL302-2B
 
-# Laboratory No. 3 — Answers
+# Laboratory No. 3
 ## Modeling Student Attention and Performance Using Agent-Based Simulation
 **Course:** CSEL302 — Introduction to Intelligent Systems
-**Term:** 2nd Semester, A.Y. 2025-2026
+
 
 ---
 
