@@ -47,7 +47,7 @@ If attention keeps decreasing without any break, it will eventually reach the mi
 | Average Attention | 0.80 |
 | Average Performance | 1.0 |
 | High Attention Count | 25 students |
-| Number of Breaks Occurred | ~2 breaks |
+| Number of Breaks Occurred | 2 breaks |
 
 ---
 
@@ -126,10 +126,10 @@ In a real classroom, this represents that only students who are **very focused a
 
 | Students | Avg Attention | Avg Performance |
 |----------|--------------|-----------------|
-| 10       | ~0.55        | ~0.60           |
-| 25       | ~0.52        | ~0.57           |
-| 60       | ~0.50        | ~0.54           |
-| 100      | ~0.48        | ~0.51           |
+| 10       | 0.55        | 0.60           |
+| 25       | 0.52        | 0.57           |
+| 60       | 0.50        | 0.54           |
+| 100      | 0.48        | 0.51           |
 
 > *Note: Values are estimated from simulation runs. Small variations are expected due to randomness in agent initialization.*
 
