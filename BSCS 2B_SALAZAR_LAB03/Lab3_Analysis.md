@@ -77,4 +77,3 @@ The simulation results show that breaks play a critical role in maintaining stud
 
 ---
 
-*Analysis based on classroom_data.csv — 101 cycles, 25 students, base model parameters*
