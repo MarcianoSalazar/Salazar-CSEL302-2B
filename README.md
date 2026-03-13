@@ -96,7 +96,7 @@ attention <- max(0.0, attention - 0.05);
 
 - **Does performance still improve?** It depends. If breaks are frequent enough to bring attention back above 0.6, performance can still improve during those short windows. But overall, performance improvement is slower and less consistent because attention spends more time below the 0.6 threshold. In most cases, average performance will either stagnate or grow very slowly.
 
-**Explanation:** The higher decay rate simulates students losing focus much more rapidly — like a very hard or boring lecture. The system becomes more "fragile" and dependent on frequent breaks to maintain any performance gains.
+**Explanation:** The higher decay rate simulates students losing focus much more rapidly, like a very hard or boring lecture. The system becomes more "fragile" and dependent on frequent breaks to maintain any performance gains.
 
 ---
 
@@ -118,7 +118,7 @@ if (attention > 0.8)
 Yes, definitely slower. The threshold from 0.6 to 0.8 means students now need to be in a much higher attention state before they get any performance benefit. Since attention starts at random values and decays over time, fewer students will consistently be above 0.8, so performance increase events happen less frequently.
 
 - **What does this represent in real classroom settings?**
-In a real classroom, this represents that only students who are **very focused and actively engaged** (not just "somewhat paying attention") are actually learning and improving their performance. A threshold of 0.6 is like passive listening — you're present but not deeply engaged. A threshold of 0.8 is like active participation — you're taking notes, asking questions, and fully processing the information. This is a more realistic model because research shows that deep learning requires high cognitive engagement, not just passive presence.
+In a real classroom, this represents that only students who are **very focused and actively engaged** (not just "somewhat paying attention") are actually learning and improving their performance. A threshold of 0.6 is like passive listening, you're present but not deeply engaged. A threshold of 0.8 is like active participation, you're taking notes, asking questions, and fully processing the information. This is a more realistic model because research shows that deep learning requires high cognitive engagement, not just passive presence.
 
 ---
 
@@ -146,7 +146,7 @@ Yes. Even though each student follows simple rules (decrease attention during cl
    - Clusters of green (high attention) students appear during breaks
    - The classroom "pulses" between periods of high and low attention
    - With 100 students, you can see waves of color change spreading through the population
-   - No single student was programmed to create these patterns — they emerge from individual interactions with the simple rules
+   - No single student was programmed to create these patterns, they emerge from individual interactions with the simple rules
 
 ---
 
@@ -158,7 +158,7 @@ The CSV file contains columns: cycle, avg_attention, avg_performance, is_break, 
 
 **Key findings from data analysis:**
 
-- **Attention vs Cycle:** Attention shows a sawtooth pattern — it decreases during class periods and jumps back up during breaks. This is very visible when plotted over time.
+- **Attention vs Cycle:** Attention shows a sawtooth pattern, it decreases during class periods and jumps back up during breaks. This is very visible when plotted over time.
 
 - **Performance vs Cycle:** Performance shows a gradual upward trend overall, but it grows faster during and right after breaks when attention is high.
 
@@ -168,7 +168,7 @@ The CSV file contains columns: cycle, avg_attention, avg_performance, is_break, 
 
 **Question: Is performance strongly dependent on attention?**
 
-Yes, performance is strongly dependent on attention in this model. The only way performance can increase is when `attention > 0.6`, which means attention is a necessary condition for performance growth. However, performance never decreases in the base model, so once students gain performance points, they keep them even when attention is low. This means the relationship is asymmetric — attention is required to gain performance, but losing attention does not directly reduce performance.
+Yes, performance is strongly dependent on attention in this model. The only way performance can increase is when `attention > 0.6`, which means attention is a necessary condition for performance growth. However, performance never decreases in the base model, so once students gain performance points, they keep them even when attention is low. This means the relationship is asymmetric, attention is required to gain performance, but losing attention does not directly reduce performance.
 
 ---
 
@@ -176,7 +176,7 @@ Yes, performance is strongly dependent on attention in this model. The only way 
 
 **1. Why does performance only increase when attention > 0.6?**
 
-The threshold of 0.6 represents the minimum level of focused engagement needed for actual learning to occur. Below 0.6, a student is either distracted, daydreaming, or just passively sitting. At or below this level, no new information is being effectively processed and stored. The 0.6 threshold is a simplification of the concept that there is a minimum cognitive engagement level required for meaningful learning. This is similar to how in real learning science, passive exposure to material (low attention) does not lead to the same retention as active engagement (high attention). The threshold models this binary switch — either you're engaged enough to learn or you're not.
+The threshold of 0.6 represents the minimum level of focused engagement needed for actual learning to occur. Below 0.6, a student is either distracted, daydreaming, or just passively sitting. At or below this level, no new information is being effectively processed and stored. The 0.6 threshold is a simplification of the concept that there is a minimum cognitive engagement level required for meaningful learning. This is similar to how in real learning science, passive exposure to material (low attention) does not lead to the same retention as active engagement (high attention). The threshold models this binary switch, either you're engaged enough to learn or you're not.
 
 **2. Is this model deterministic or stochastic?**
 
@@ -186,7 +186,7 @@ This model is **stochastic** (random/probabilistic). There are several sources o
 - `mobility` is randomly assigned per student
 - Movement direction uses `rnd(360.0)` every cycle
 
-Because of these random elements, running the simulation twice with the same parameters will give slightly different results each time. However, there is also a **deterministic** component — the break schedule (`cycle mod 30 = 0`) and the rules for attention change and performance growth are fixed and predictable. So it is a **mixed model** but classified as stochastic overall because the initial conditions and movement are random.
+Because of these random elements, running the simulation twice with the same parameters will give slightly different results each time. However, there is also a **deterministic** component, the break schedule (`cycle mod 30 = 0`) and the rules for attention change and performance growth are fixed and predictable. So it is a **mixed model** but classified as stochastic overall because the initial conditions and movement are random.
 
 **3. What real-world classroom factors are missing?**
 
@@ -204,7 +204,7 @@ Many important factors are missing from this simplified model:
 
 **4. How would peer influence affect the system?**
 
-If peer influence was added, the model would become significantly more complex and more realistic. Students sitting near highly attentive peers would benefit from a "social contagion" effect — their attention would increase slightly because of the engaged atmosphere around them. On the other hand, students near very distracted or disruptive peers would have their attention dragged down. This would create **spatial clustering** in the simulation — groups of high-attention students and groups of low-attention students forming naturally without being explicitly programmed. The emergent behavior would be much richer. The system would also become more sensitive to initial conditions — where one low-attention student sits could have cascading effects on nearby students.
+If peer influence was added, the model would become significantly more complex and more realistic. Students sitting near highly attentive peers would benefit from a "social contagion" effect, their attention would increase slightly because of the engaged atmosphere around them. On the other hand, students near very distracted or disruptive peers would have their attention dragged down. This would create **spatial clustering** in the simulation, groups of high-attention students and groups of low-attention students forming naturally without being explicitly programmed. The emergent behavior would be much richer. The system would also become more sensitive to initial conditions, where one low-attention student sits could have cascading effects on nearby students.
 
 ---
 
@@ -232,10 +232,8 @@ if (low_attention_counter >= 10) {
 
 The fatigue model adds a `low_attention_counter` to each student. Every cycle where attention stays below 0.3, the counter increases. If it reaches 10 consecutive cycles (meaning the student has been severely inattentive for 10 cycles in a row), performance starts to decrease by 0.01 per cycle. The counter resets to 0 whenever attention rises back above 0.3.
 
-This models the real-world concept of **cognitive fatigue** — a student who is severely distracted for a prolonged period doesn't just stop learning, they actually start to lose retention or fall behind. The `max(0.0, ...)` ensures performance never drops below 0.
+This models the real-world concept of **cognitive fatigue**, a student who is severely distracted for a prolonged period doesn't just stop learning, they actually start to lose retention or fall behind. The `max(0.0, ...)` ensures performance never drops below 0.
 
-With this addition, the simulation shows that students who consistently have very low attention are not just "not learning" — they are actively regressing in performance. This makes the impact of breaks even more important, since breaks prevent students from falling into the low-attention fatigue zone.
+With this addition, the simulation shows that students who consistently have very low attention are not just "not learning", they are actively regressing in performance. This makes the impact of breaks even more important, since breaks prevent students from falling into the low-attention fatigue zone.
 
 ---
-
-*End of Laboratory No. 3 Answers*
