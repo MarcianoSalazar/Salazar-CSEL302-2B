@@ -1,7 +1,7 @@
 # CSEL302 – Assessment Task No. 4
 **Topic:** Agent Behaviors and Reflexes in Agent-Based Systems
 **Course:** Introduction to Intelligent Systems
-**Term:** 2nd Semester, A.Y. 2025–2026
+
 
 ---
 
